@@ -1,0 +1,130 @@
+body {
+    background: #f4f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#FormBlock {
+    background: #fff;
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+h4 {
+    margin-top: 0;
+    color: #2d3a4b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #34495e;
+    font-size: 1rem;
+    align-self: flex-start;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f9fbfc;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 160px;
+    font-size: 1.08rem;
+    resize: none;
+    margin-bottom: 18px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+    background: #fff;
+}
+
+textarea:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+    background: #fff;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #1976d2;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0;
+    align-self: unset;
+    transition: background 0.2s;
+    width: 50%;
+}
+
+input[type="reset"] {
+    background: #b0bec5;
+    margin-right: 0;
+}
+
+input[type="submit"]:hover {
+    background: #125ea7;
+}
+
+input[type="reset"]:hover {
+    background: #78909c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    #FormBlock {
+        max-width: 95vw;
+        padding: 18px 8vw 16px 8vw;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    label, input[type="submit"], input[type="reset"] {
+        font-size: 0.95rem;
+    }
+    .button-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+    }
+}

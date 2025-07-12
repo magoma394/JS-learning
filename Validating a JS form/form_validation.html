@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="application/javascript">
-            function checkdata()
-            {
-                var username = document.getElementById("name");
-                var emailid = document.getElementById("email");
-                if(username.value==""){
-                    alert("enter the name, bitch!!")
-                    username.focus();
-                    return false;
-                }
-                if(email_address.value==""){
-                    alert("Enter the email, idiot")
-                    return false;
-                }
-                return true;
-            }
-        </script>
-        <title>Contact Details</title>
+        <title>Contact Us</title>
     </head>
     <body>
-        <h2>Enter your contact details:</h2> <br>
+        <div id="FormBlock">
+        <h4>Enter your contact details:</h4> <br>
         <form id="form1" onsubmit="return checkdata()">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <br><br>
             <label for="email">Email Address:</label>
-            <input type="text" id="email" name="email">
+            <input type="email" id="email" name="email">
             <br><br>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <label for="Message">Your Message:</label>
+            <textarea id="msg" name="msg" rows="5" placeholder="Type your message here..."></textarea>
+            <br><br>
+            <div class="button-row">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
         </form>
+        </div>
+        <script src="func.js"></script>
+        <link rel="stylesheet" href="style.css">
     </body>
 </html>
